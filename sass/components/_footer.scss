@@ -1,0 +1,183 @@
+.footer-nav {
+    background-color: $background-one;
+
+    &_three-blocks{
+       
+        display: flex;
+        gap: 60px;
+    }
+
+
+}
+
+
+.contact {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+
+    &>ul>li>a:not(:first-child):hover{
+       
+        color: $basic-color;
+
+    }
+
+        &>ul>li>a:focus {
+
+        color: $basic-color;
+
+    }
+
+    &>ul>li {
+        color: #FFFFFF;
+            padding: 9px;
+            transition: $transition-color;
+    }
+
+    &_list {
+        display: block;
+       
+    }
+
+    &_list-item {
+        transition: $transition-color;
+        color: #FFFFFF;
+        
+    }
+
+    &_list-item--transparent {
+        color: #FFFFFF;
+        opacity: 0.6;
+    }
+
+    &_footer-logo {
+        font-size: 26px;
+            font-weight: 700;
+            font-family: "Raleway";
+            cursor: pointer;
+        letter-spacing: 0.03em;
+        color: #FFFFFF;
+    }
+
+    &_footer-logo--web {
+        color: $basic-color;
+    }
+    
+    &_footer-logo a {
+        color: #FFFFFF;
+    }
+}
+
+
+.footer-social {
+    padding-top: 72px; 
+
+    &_list {
+        display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 0;
+    }
+
+    &_list-item {
+        width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255, 0.1);
+        
+            transition: $transition-bg;
+    }
+    
+    &_list-item:hover,
+    &_list-item:focus{
+        background-color: $basic-color;
+    }
+
+
+    &_icon {
+        display: block;
+            align-items: center;
+            fill: #FFFFFF;
+            margin: 12px;
+    }
+
+        &_icon:hover,
+        &_icon:focus &_list-item {
+            fill: #ffffff;
+        }
+}
+
+
+
+
+
+.footer-newsletter {
+    padding-top: 72px;
+
+    &_header {
+        font-weight: 700;
+        color: #FFFFFF;
+    }
+
+    &_box {
+        display: flex;
+        align-items: center;
+    
+    }
+
+    &_box input {
+            background-color: inherit;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+            border-radius: 4px;
+            width: 342px;
+            height: 50px;
+            padding-left: 16px;
+        }
+
+    &_box ::placeholder {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    &_send-button {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-left: 12px;
+    
+    }
+
+    &_button-newsletter {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 200px;
+            height: 50px;
+            background-color: $basic-color;
+            box-shadow: rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            border: 1px;
+            color: #fff;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 16px;
+            padding-left: 42px;
+            border: 1px solid $basic-color;
+        }
+
+    &_send-icon {
+        display: flex;
+        position: absolute;
+        margin-left: 94px;
+        fill: #fff;
+    }
+
+}
+
+
+
+
+
+
+

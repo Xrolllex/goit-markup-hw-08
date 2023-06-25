@@ -1,0 +1,25 @@
+.clients-section {
+    &_list {
+        justify-content: space-around;
+        padding-bottom: 94px;
+        display: flex;
+    }
+
+    &_icons {
+        border: 1px solid #AFB1B8;
+        border-radius: 4px;
+        fill: #AFB1B8;
+        padding: 16px 32px;
+        
+        transition: $transition-fill, $transition-color;
+    }
+
+    &_icons:hover,
+    &_icons:focus {
+
+        fill: $basic-color;
+        border-color: $basic-color;
+}
+
+
+}

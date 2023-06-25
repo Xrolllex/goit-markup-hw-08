@@ -1,0 +1,98 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 15px;
+    margin-bottom: 94px;
+  
+  
+   &_box {
+    position: relative;
+        overflow: hidden;
+        
+  }
+
+  &_box--page-up {
+    position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $basic-color;
+        color: #FFFFFF;
+        font-size: 18px;
+        letter-spacing: 0.03em;
+        padding-left: 24px;
+        padding-top: 49px;
+        line-height: 1.55;
+    
+        transform: translatey(100%);
+        transition: transform 250ms ease-in-out;
+  }
+
+
+  &_description {
+    padding: 20px 0 4px 24px;
+    border: 1px solid #EEEEEE;
+    border-top: none;
+}
+
+&_box:hover &_box--page-up {
+    transform: translatey(0);
+}
+
+&>li:hover,
+&>li:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+&_description-offer {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 2;
+    font-weight: 700;
+}
+
+&_description-category {
+    font-size: 16px;
+        color: var(--contact-color);
+        line-height: 1.9;
+}
+
+}
+
+.service-categories {
+    padding: 94px 0 34px;
+
+    &_list {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        border: none;
+        border-radius: 4px;
+    }
+
+    &_list-item {
+        background-color: $background-two;
+            cursor: pointer;
+            padding: 15px;
+            border: none;
+            border-radius: 3px;
+            line-height: 1.6;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 6px 22px;
+        
+            transition: $transition-bg,$transition-color;
+    }
+
+    &_list-item:hover,
+    &_list-item:focus  {
+        background-color: $basic-color;
+            color: #FFFFFF;
+            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+            border-radius: 4px;
+}
+
+}
+

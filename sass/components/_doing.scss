@@ -1,0 +1,28 @@
+.doing-section {
+    &_list-item {
+        position: relative;
+            gap: 30px;
+            margin: auto;
+            padding-bottom: 94px;
+            display: flex;
+            align-items: self-end;
+    }
+
+    &_text {
+        position: absolute;
+            width: 100%;
+            font-size: 14px;
+            letter-spacing: 0.03em;
+            line-height: 0.88;
+            font-weight: 700;
+            background-color: rgba(47, 48, 58, 0.8);
+            color: #fff;
+            display: flex;
+            padding-top: 27px;
+            padding-bottom: 27px;
+            margin: auto;
+            justify-content: space-around;
+            text-transform: uppercase;
+    }
+}
+

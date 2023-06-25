@@ -1,0 +1,25 @@
+.lorem-section {
+    &_list {
+        padding-top: 94px;
+    }
+
+    &_list-item {
+        padding-right: 30px;
+    }
+
+    &_list-item>svg {
+        background-color: $background-two;
+        padding: 25px 100px;
+    }
+
+    &_list-item h3 {
+        font-size: 14px;
+    }
+
+    &_list-item p {
+        color: #757575;
+        letter-spacing: 0.03em;
+        font-size: 14px;
+        width: 270px;
+    }
+}

@@ -1,0 +1,125 @@
+.main-header{
+    border: 1px solid #EEEEEE;
+
+&_navigation {
+    display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 0;
+        letter-spacing: 0.02em;
+        font-weight: 500;
+}
+
+&_menu {
+    display: flex;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        align-items: center;
+        justify-content: flex-start;
+}
+
+&_menu li:nth-of-type(2){
+    padding-left: 93px;
+}
+
+&_menu li {
+    max-width: 254px;
+        margin-right: 46px;
+}
+
+
+&_address {
+    display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-weight: 500;
+        gap: 50px;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+}
+
+&_address>li>a {
+    transition: $transition-color;
+}
+
+&_address>li>a>svg {
+    transition: $transition-color, $transition-fill;
+}
+
+&_address li :hover,
+&_address li :focus {
+    color: $basic-color;
+}
+
+
+&_address li :hover svg,
+&_address li :focus svg {
+    fill: $basic-color;
+}
+
+
+&_link--with-icon {
+    display: flex;
+        align-items: center;
+        color: $contact-color;
+}
+
+&_icon {
+    fill: $contact-color;
+        padding-right: 10px;
+}
+
+}
+
+.main-menu {
+    &_item--underline{
+        position: relative;
+            top: 30px;
+    }
+
+    &_item--underline::after{
+        content: "";
+            background: #2196f3;
+            border-radius: 2px;
+            width: 53px;
+            height: 4px;
+            display: block;
+    }
+
+    &_item :hover,
+    &_item :focus {
+        color: $basic-color;
+        transition: $transition-color
+    }
+    
+
+}
+
+
+
+.page-link {
+   
+   &_logo {
+    font-size: 26px;
+        font-weight: 700;
+        font-family: Raleway;
+        letter-spacing: 0.03em;
+   } 
+
+   &_logo--highlighted {
+    
+    color: $basic-color;
+   }
+
+   
+}
+
+
+
+
+
+
+
+
