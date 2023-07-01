@@ -1,183 +1,255 @@
 .footer-nav {
-    background-color: $background-one;
+  background-color: $background-one;
+  display: flex;
+  flex-direction: column;
 
-    &_three-blocks{
-       
-        display: flex;
-        gap: 60px;
+  @include desktop {
+    width: 100%;
+    margin: auto;
+  }
+
+  &__three-blocks {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
-
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      text-align: left;
+      gap: 60px;
+      flex-wrap: nowrap;
+    }
+  }
 }
-
 
 .contact {
-    padding-top: 60px;
+  padding-top: 60px;
+  margin-right: 40px;
+
+  @include tablet {
     padding-bottom: 60px;
+    margin-right: 0;
+  }
 
+  @include desktop {
+    padding-bottom: 60px;
+  }
 
-    &>ul>li>a:not(:first-child):hover{
-       
-        color: $basic-color;
+  & > ul > li > a:not(:first-child):hover {
+    color: $basic-color;
+  }
 
+  & > ul > li > a:focus {
+    color: $basic-color;
+  }
+
+  & > ul > li {
+    color: #ffffff;
+    padding: 9px;
+    transition: $transition-color;
+  }
+
+  &__list {
+    display: block;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: left;
     }
+  }
 
-        &>ul>li>a:focus {
-
-        color: $basic-color;
-
+  &__list-item {
+    transition: $transition-color;
+    color: #ffffff;
+    @include desktop {
+      width: 246px;
     }
+  }
 
-    &>ul>li {
-        color: #FFFFFF;
-            padding: 9px;
-            transition: $transition-color;
-    }
+  &__list-item--transparent {
+    color: #ffffff;
+    opacity: 0.6;
+  }
 
-    &_list {
-        display: block;
-       
-    }
+  &__footer-logo {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Raleway";
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    color: #ffffff;
 
-    &_list-item {
-        transition: $transition-color;
-        color: #FFFFFF;
-        
+    @include desktop {
+      font-size: 26px;
     }
+  }
 
-    &_list-item--transparent {
-        color: #FFFFFF;
-        opacity: 0.6;
-    }
+  &__footer-logo--web {
+    color: $basic-color;
+  }
 
-    &_footer-logo {
-        font-size: 26px;
-            font-weight: 700;
-            font-family: "Raleway";
-            cursor: pointer;
-        letter-spacing: 0.03em;
-        color: #FFFFFF;
-    }
-
-    &_footer-logo--web {
-        color: $basic-color;
-    }
-    
-    &_footer-logo a {
-        color: #FFFFFF;
-    }
+  &__footer-logo a {
+    color: #ffffff;
+  }
 }
-
 
 .footer-social {
-    padding-top: 72px; 
+  padding-top: 72px;
 
-    &_list {
-        display: flex;
-            justify-content: space-between;
-            gap: 10px;
-            padding: 0;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include desktop {
+      text-align: left;
+      align-items: left;
+      justify-content: left;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 137px;
+
+    @include tablet {
+      gap: 5px;
     }
 
-    &_list-item {
-        width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background-color: rgb(255, 255, 255, 0.1);
-        
-            transition: $transition-bg;
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 0;
     }
-    
-    &_list-item:hover,
-    &_list-item:focus{
-        background-color: $basic-color;
+  }
+
+  &__list-item {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255, 0.1);
+
+    transition: $transition-bg;
+  }
+
+  &__list-item {
+    &:hover,
+    &:focus {
+      background-color: $basic-color;
     }
+  }
 
+  &__icon {
+    display: block;
+    align-items: center;
+    fill: #ffffff;
+    margin: 12px;
+  }
 
-    &_icon {
-        display: block;
-            align-items: center;
-            fill: #FFFFFF;
-            margin: 12px;
+  &__icon {
+    &:hover,
+    &:focus & {
+      fill: #ffffff;
     }
-
-        &_icon:hover,
-        &_icon:focus &_list-item {
-            fill: #ffffff;
-        }
+  }
 }
-
-
-
-
-
 .footer-newsletter {
-    padding-top: 72px;
+  padding-top: 72px;
+  display: flex;
+  flex-direction: column;
 
-    &_header {
-        font-weight: 700;
-        color: #FFFFFF;
+  @include tablet {
+    padding-top: 0;
+  }
+
+  @include desktop {
+    margin-top: 72px;
+  }
+
+  &__header {
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 60px;
+
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 20px;
     }
+  }
 
-    &_box {
-        display: flex;
-        align-items: center;
-    
-    }
+  &__box input {
+    background-color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    width: 342px;
+    height: 50px;
+    padding-left: 16px;
+  }
 
-    &_box input {
-            background-color: inherit;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-            border-radius: 4px;
-            width: 342px;
-            height: 50px;
-            padding-left: 16px;
-        }
+  &__box ::placeholder {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+  }
 
-    &_box ::placeholder {
-        font-size: 16px;
-        color: rgba(255, 255, 255, 0.6);
-    }
+  &__send-button {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-left: 12px;
+  }
 
-    &_send-button {
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        margin-left: 12px;
-    
-    }
+  &__button-newsletter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    background-color: $basic-color;
+    box-shadow: rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 1px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    padding-left: 42px;
+    border: 1px solid $basic-color;
+  }
 
-    &_button-newsletter {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            width: 200px;
-            height: 50px;
-            background-color: $basic-color;
-            box-shadow: rgba(0, 0, 0, 0.15);
-            border-radius: 4px;
-            border: 1px;
-            color: #fff;
-            cursor: pointer;
-            font-weight: 700;
-            font-size: 16px;
-            padding-left: 42px;
-            border: 1px solid $basic-color;
-        }
-
-    &_send-icon {
-        display: flex;
-        position: absolute;
-        margin-left: 94px;
-        fill: #fff;
-    }
-
+  &__send-icon {
+    display: flex;
+    position: absolute;
+    margin-left: 94px;
+    fill: #fff;
+  }
 }
-
-
-
-
-
-
-

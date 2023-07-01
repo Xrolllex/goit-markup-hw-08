@@ -1,28 +1,56 @@
 .slider {
-    background-image: linear-gradient($overlay, $overlay),
-        url("../images/slider.jpg");
-    background-color: rgba(47, 48, 58, 0.4);
+  background-image: linear-gradient($overlay, $overlay),
+    url("../images/slider.jpg");
+  background-color: rgba(47, 48, 58, 0.4);
+  display: block;
+  width: 480px;
+  height: 400px;
+  background-size: cover;
+  text-align: center;
+
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  margin: auto;
+  @include tablet {
+    height: 400px;
+    width: 768px;
+  }
+
+  @include desktop {
     height: 600px;
     width: 1600px;
-    background-size: contain;
-    text-align: center;
+  }
+
+  &__item--button {
+    background-color: $basic-color;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    font-weight: 700;
+    line-height: 1.9;
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  & h1 {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 60px;
+    padding-top: 118px;
+    padding-bottom: 30px;
+    width: 365px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-position: center;
     margin: auto;
 
-    &_item--button {
-        background-color: $basic-color;
-            color: #fff;
-            cursor: pointer;
-            border: none;
-            border-radius: 3px;
-            font-weight: 700;
-            line-height: 1.9;
-            width: 200px;
-            height: 50px;
+    @include desktop {
+      font-size: 44px;
+      width: 696px;
+      padding-top: 200px;
     }
-
+  }
 }
-

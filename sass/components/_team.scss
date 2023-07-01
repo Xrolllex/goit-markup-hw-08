@@ -1,80 +1,148 @@
 .team-section {
-    background-color: $background-two;
-    padding-bottom: 94px;
+  background-color: $background-two;
+  padding-bottom: 94px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-right: 60px;
+  width: 480px;
 
-    &_circle-icon {
-        width: 44px;
-            height: 44px;
-            border-radius: 50%;
-        
-            transition: $transition-bg,;
-    }
-    
-    &_circle-icon:hover,
-    &_circle-icon:focus  {
-     background-color: $basic-color;
-    }
-    
-    
-    &_social-media {
-        
-        display: block;
-        align-items: center;
-        fill: #afb1b8;
-        margin: 12px;
+  @include tablet {
+    width: 768px;
+  }
 
-        transition: $transition-fill;
-    }   
+  @include desktop {
+    width: 100%;
+  }
 
-    &_circle-icon:hover &_social-media {
-        fill: #FFFFFF;
+  & ul {
+    margin-right: 40px;
+    @include tablet {
+      margin-right: 0;
     }
 
+    @include desktop {
+      margin-right: 0;
+    }
+  }
 
-    &_social-media:hover,
-    &_social-media:focus {
-       
-        fill: #FFFFFF;
+  & img {
+    width: 450px;
+    height: 460px;
+
+    @include tablet {
+      width: 354px;
+      height: 374px;
     }
 
-         
-   
+    @include desktop {
+      width: 270px;
+      height: 260px;
+    }
+  }
 
+  &__circle-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
 
-    &_social-icons{
-        display: flex;
-            align-items: center;
-            justify-content: space-around;
-            margin-left: 22px;
-            margin-right: 32px;
-            padding: 0;
-            margin-bottom: 30px;
+    transition: $transition-bg;
+  }
+
+  &__circle-icon {
+    &:hover,
+    &:focus {
+      background-color: $basic-color;
+    }
+  }
+
+  &__social-media {
+    display: block;
+    align-items: center;
+    fill: #afb1b8;
+    margin: 12px;
+
+    transition: $transition-fill;
+  }
+
+  &__circle-icon:hover &__social-media {
+    fill: #ffffff;
+  }
+
+  &__social-media {
+    &:hover,
+    &:focus {
+      fill: #ffffff;
+    }
+  }
+
+  &__social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    padding: 0;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+
+    @include tablet {
+      padding-bottom: 0px;
     }
 
-    &_name {
-        color: $second-color;
-            font-weight: 500;
-            font-size: 16px;
+    @include desktop {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 113px;
+      margin-bottom: 30px;
+      width: 44px;
+    }
+  }
+
+  &__name {
+    color: $second-color;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  &__job {
+    color: $contact-color;
+    font-size: 16px;
+  }
+
+  &__list-item {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: #ffffff;
+    text-align: center;
+    max-width: 460px;
+
+    @include tablet {
+      max-width: 354px;
     }
 
-    &_job {
-        color: $contact-color;
-            font-size: 16px;
+    @include desktop {
+      max-width: 270px;
     }
+  }
 
-    &_list-item{
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-            border-radius: 0px 0px 4px 4px;
-            background-color: #FFFFFF;
-            text-align: center;
+  &__list {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @include desktop {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
-
-
-    &_list {
-        justify-content: space-between;
-    }
+  }
 }
-
-
-
-

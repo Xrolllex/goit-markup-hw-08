@@ -1,25 +1,45 @@
 .clients-section {
-    &_list {
-        justify-content: space-around;
-        padding-bottom: 94px;
-        display: flex;
+  &__list {
+    justify-content: space-around;
+    padding-bottom: 94px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 428px;
+    margin-left: -20px;
+
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      width: 100%;
+      margin-left: -50px;
     }
 
-    &_icons {
-        border: 1px solid #AFB1B8;
-        border-radius: 4px;
-        fill: #AFB1B8;
-        padding: 16px 32px;
-        
-        transition: $transition-fill, $transition-color;
+    @include desktop {
+      flex-wrap: nowrap;
+      width: 1200px;
     }
+  }
 
-    &_icons:hover,
-    &_icons:focus {
+  &__icons {
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    fill: #afb1b8;
+    padding: 16px 32px;
 
-        fill: $basic-color;
-        border-color: $basic-color;
-}
+    transition: $transition-fill, $transition-color;
+  }
 
-
+  &__icons {
+    &:hover,
+    &:focus {
+      fill: $basic-color;
+      border-color: $basic-color;
+    }
+  }
 }

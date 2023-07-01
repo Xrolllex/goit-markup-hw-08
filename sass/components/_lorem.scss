@@ -1,25 +1,75 @@
 .lorem-section {
-    &_list {
-        padding-top: 94px;
+  display: flex;
+  justify-content: center;
+  margin-right: 50px;
+
+  @include tablet {
+    margin-left: 30px;
+    margin-right: 0;
+  }
+
+  &__list {
+    padding-top: 60px;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
     }
 
-    &_list-item {
-        padding-right: 30px;
+    @include desktop {
+      padding-top: 94px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__list-item {
+    padding-right: 20px;
+  }
+
+  &__list-item > svg {
+    background-color: $background-two;
+    padding: 25px 190px;
+
+    @include tablet {
+      padding: 25px 102px;
     }
 
-    &_list-item>svg {
-        background-color: $background-two;
-        padding: 25px 100px;
+    @include desktop {
+      padding: 25px 100px;
+    }
+  }
+
+  &__list-item h3 {
+    font-size: 14px;
+    text-align: center;
+
+    @include tablet {
+      text-align: left;
     }
 
-    &_list-item h3 {
-        font-size: 14px;
+    @include desktop {
+      text-align: left;
+    }
+  }
+
+  &__list-item p {
+    color: #757575;
+    letter-spacing: 0.03em;
+    font-size: 14px;
+
+    text-align: center;
+
+    @include tablet {
+      text-align: left;
+      width: 334px;
     }
 
-    &_list-item p {
-        color: #757575;
-        letter-spacing: 0.03em;
-        font-size: 14px;
-        width: 270px;
+    @include desktop {
+      width: 270px;
+      text-align: left;
     }
+  }
 }

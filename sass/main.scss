@@ -1,6 +1,8 @@
 @use "./utils/vars" as *;
+@import "./utils/mixins";
+@import "./utils/global";
+
 @import "./components/page-header";
-@import "./components/global";
 @import "./components/footer";
 @import "./components/lorem";
 @import "./components/team";
@@ -8,5 +10,5 @@
 @import "./components/doing";
 @import "./components/slider";
 @import "./components/modal";
-@import "./components/service-offer"
-
+@import "./components/service-offer";
+@import "./components/mobile-menu";

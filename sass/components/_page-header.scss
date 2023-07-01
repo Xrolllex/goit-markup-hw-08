@@ -1,125 +1,183 @@
-.main-header{
-    border: 1px solid #EEEEEE;
+.main-header {
+  border: 1px solid #eeeeee;
 
-&_navigation {
+  &__navigation {
     display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 15px 0;
-        letter-spacing: 0.02em;
-        font-weight: 500;
-}
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 0;
+    letter-spacing: 0.02em;
+    font-weight: 500;
 
-&_menu {
+    @include desktop {
+      padding: 15px 0;
+    }
+  }
+
+  &__menu {
     display: flex;
-        font-size: 14px;
-        line-height: 16px;
-        letter-spacing: 0.02em;
-        align-items: center;
-        justify-content: flex-start;
-}
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    align-items: center;
+    justify-content: flex-start;
+  }
 
-&_menu li:nth-of-type(2){
-    padding-left: 93px;
-}
+  &__menu li:nth-of-type(2) {
+    padding-left: 15px;
 
-&_menu li {
+    @include desktop {
+      padding-left: 93px;
+    }
+  }
+
+  &__menu li {
     max-width: 254px;
-        margin-right: 46px;
-}
+    margin-right: 46px;
 
+    @include desktop {
+      &__menu li:not(:last-child) {
+        margin-right: 60px;
+      }
+    }
+  }
 
-&_address {
-    display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        font-weight: 500;
-        gap: 50px;
-        font-size: 14px;
-        line-height: 16px;
-        letter-spacing: 0.02em;
-}
+  &__address {
+    display: none;
 
-&_address>li>a {
+    @include tablet {
+      display: block;
+      font-weight: 500;
+
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.02em;
+      margin-right: 15px;
+      font-size: 12px;
+    }
+
+    @include desktop {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 50px;
+      font-size: 14px;
+    }
+  }
+
+  &__address > li > a {
     transition: $transition-color;
-}
+  }
 
-&_address>li>a>svg {
+  &__address > li > a > svg {
     transition: $transition-color, $transition-fill;
-}
+  }
 
-&_address li :hover,
-&_address li :focus {
-    color: $basic-color;
-}
+  &__address {
+    & li :hover,
+    & li :focus {
+      color: $basic-color;
+    }
+  }
 
+  &__address {
+    & li:hover svg,
+    & li :focus svg {
+      fill: $basic-color;
+    }
+  }
 
-&_address li :hover svg,
-&_address li :focus svg {
-    fill: $basic-color;
-}
-
-
-&_link--with-icon {
+  &__link--with-icon {
     display: flex;
-        align-items: center;
-        color: $contact-color;
-}
+    align-items: center;
+    color: $contact-color;
+  }
 
-&_icon {
+  &__icon {
     fill: $contact-color;
-        padding-right: 10px;
-}
+    padding-right: 10px;
+  }
 
+  &__hamburger {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    padding-right: 20px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__icon-mail {
+    width: 14px;
+    height: 10px;
+    fill: $contact-color;
+    padding-right: 5px;
+  }
+
+  &__icon-phone {
+    width: 10px;
+    height: 14px;
+    fill: $contact-color;
+    padding-right: 5px;
+  }
 }
 
 .main-menu {
-    &_item--underline{
-        position: relative;
-            top: 30px;
+  &__item {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__item--underline {
+    position: relative;
+    top: 28px;
+
+    @include tablet {
+      top: 23px;
     }
 
-    &_item--underline::after{
-        content: "";
-            background: #2196f3;
-            border-radius: 2px;
-            width: 53px;
-            height: 4px;
-            display: block;
+    @include desktop {
+      position: relative;
+      top: 30px;
     }
+  }
 
-    &_item :hover,
-    &_item :focus {
-        color: $basic-color;
-        transition: $transition-color
+  &__item--underline::after {
+    content: "";
+    background: #2196f3;
+    border-radius: 2px;
+    width: 53px;
+    height: 4px;
+    display: block;
+  }
+
+  &__item {
+    & :hover,
+    & :focus {
+      color: $basic-color;
+      transition: $transition-color;
     }
-    
-
+  }
 }
-
-
 
 .page-link {
-   
-   &_logo {
+  &__logo {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Raleway;
+    letter-spacing: 0.03em;
+  }
+
+  @include desktop {
     font-size: 26px;
-        font-weight: 700;
-        font-family: Raleway;
-        letter-spacing: 0.03em;
-   } 
+  }
 
-   &_logo--highlighted {
-    
+  &__logo--highlighted {
     color: $basic-color;
-   }
-
-   
+  }
 }
-
-
-
-
-
-
-
-
