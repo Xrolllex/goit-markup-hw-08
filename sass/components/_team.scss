@@ -120,6 +120,7 @@
     max-width: 460px;
 
     @include tablet {
+      margin-left: -10px;
       max-width: 354px;
     }
 
