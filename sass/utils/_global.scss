@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-  width: 480px;
+  max-width: 480px;
   margin: 0 auto;
 
   @include tablet {

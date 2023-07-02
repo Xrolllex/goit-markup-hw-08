@@ -26,19 +26,25 @@
   }
 
   &__list-item {
-    padding-right: 20px;
+    @include desktop {
+      padding-right: 20px;
+    }
   }
 
   &__list-item > svg {
     background-color: $background-two;
-    padding: 25px 190px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    width: 100%;
 
     @include tablet {
       padding: 25px 102px;
+      width: auto;
     }
 
     @include desktop {
       padding: 25px 100px;
+      width: auto;
     }
   }
 
@@ -61,6 +67,7 @@
     font-size: 14px;
 
     text-align: center;
+    width: 100%;
 
     @include tablet {
       text-align: left;
