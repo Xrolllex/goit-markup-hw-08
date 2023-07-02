@@ -85,7 +85,7 @@
   }
 
   &__input {
-    width: 345px;
+    width: calc(100% - 110px);
     height: 40px;
     margin: auto;
     display: flex;
@@ -107,7 +107,7 @@
 
   &__textarea {
     resize: none;
-    width: 370px;
+    width: calc(100% - 80px);
     height: 108px;
     margin: auto;
     display: block;
