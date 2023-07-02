@@ -17,6 +17,11 @@
     background: transparent;
     border: none;
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+      fill: $basic-color;
+    }
   }
 }
 .mobile-menu {
@@ -36,12 +41,17 @@
     font-family: Roboto;
     font-weight: 500;
     letter-spacing: 0.8px;
+
+    &:hover,
+    &:focus {
+      color: $basic-color;
+    }
   }
 }
 
 .mobile-contact {
   &__tel {
-    color: #2196f3;
+    color: $basic-color;
     font-size: 34px;
     font-family: Roboto;
     font-weight: 500;
@@ -64,7 +74,6 @@
     gap: 10px;
   }
   &__social-item {
-    color: $basic-color;
     font-size: 18px;
     font-family: Roboto;
     font-weight: 500;
@@ -74,5 +83,17 @@
 
   &__item {
     padding-bottom: 32px;
+  }
+
+  &__social-list {
+    color: $basic-color;
+
+    &::after {
+      content: "";
+      border-right: 1px solid $contact-color;
+      height: 22px;
+      margin: 0 9.5px;
+      opacity: 0.5;
+    }
   }
 }
